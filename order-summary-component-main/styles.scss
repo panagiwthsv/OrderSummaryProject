@@ -1,0 +1,137 @@
+$PaleBlue: hsl(225, 100%, 94%);
+$BrightBlue: hsl(245, 75%, 52%);
+$VeryPaleBlue: hsl(225, 100%, 98%);
+$DesaturatedBlue: hsl(224, 23%, 55%);
+$DarkBlue: hsl(223, 47%, 23%);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+    background : $PaleBlue;
+    background-image: url("./images/pattern-background-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+main{
+    max-width: 1440px; 
+
+    div.container{
+
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        max-width: 450px;
+        background: white;
+        border-radius: 20px;
+        overflow: hidden;  
+        text-align: center; 
+
+        div.text-content{
+            padding: 7%;
+
+            .title{
+                color : $DarkBlue;
+                font-weight: 900px;
+                font-size:32px;
+                margin-bottom: 20px;
+            }
+
+            .subtitle{
+                color: $DesaturatedBlue;
+                padding: 5%;
+                margin-bottom: 20px;
+                
+            }
+
+            div.plan-box{
+                background: $VeryPaleBlue;
+                border-radius: 12px;
+                display: flex;
+                padding: 20px;
+                justify-content: space-between;
+                align-items: center;
+
+                .plan-box-left{
+                    display: flex;
+                    align-items: center;
+                    text-align: left;
+
+                    div{
+                        margin-left: 20px;
+
+                        h5{
+                            font-size: 15px;
+                            font-weight: 900;
+                            color : $DarkBlue;
+                        }
+
+                        p{
+                            color : $DesaturatedBlue;
+                            font-size: 14px;
+                        }
+                    }
+
+                }
+
+                a{
+                    color: $DarkBlue;
+                    transition: color 0.5s ease;
+
+                    &:hover{
+                        text-decoration: none;
+                        color:$BrightBlue;                     
+                    }
+                }
+
+               
+                
+            }
+
+            .proceed-btn{
+                display: block;
+                color: white;
+                background : $BrightBlue;
+                text-decoration: none;
+                border-radius: 12px;
+                padding: 20px 0;
+                margin: 30px 0;
+                transition: background-color 0.5s ease;
+                box-shadow: 0 4px 20px -2px $DesaturatedBlue ;
+
+                &:hover{
+                    background:$DesaturatedBlue;
+                }
+            }
+
+            .cancel-btn{
+                color : $DesaturatedBlue;
+                text-decoration: none;
+                font-weight: 900;
+                transition: color 0.5s ease;
+
+                &:hover{
+                    color:$DarkBlue;
+                }
+
+            }
+
+            
+
+        }
+    }
+}
+
+@media only screen and (max-width:425 px){
+    .container {
+        max-width: 87%;
+    }
+}
